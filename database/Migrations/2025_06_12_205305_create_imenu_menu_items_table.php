@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('menu_id')->references('id')->on('imenu__menus')->onDelete('cascade');
             $table->integer('page_id')->unsigned()->nullable();
             $table->string('system_name')->nullable();
-            $table->integer('position')->unsigned()->default(0);
+            $table->integer('sort_order')->unsigned()->default(0);
             $table->string('target', 10)->nullable();
             $table->string('link_type')->default('page');
             $table->string('class')->nullable();

@@ -37,6 +37,6 @@ class Menu extends CoreModel
 
   public function menuitems()
   {
-    return $this->hasMany('Modules\Imenu\Models\MenuItem')->with('translations')->orderBy('position', 'asc');
+    return $this->hasMany('Modules\Imenu\Models\MenuItem')->with('translations')->orderBy('sort_order', 'asc');
   }
 }

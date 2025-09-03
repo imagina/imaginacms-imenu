@@ -34,7 +34,7 @@ class InitialMenuSeeder extends Seeder
         [
           'menu_id' => $menu->id,
           'system_name' => 'home',
-          'position' => 1,
+          'sort_order' => 1,
           'target' => '_self',
           'link_type' => 'internal',
           'en' => [
@@ -57,7 +57,7 @@ class InitialMenuSeeder extends Seeder
         [
           'menu_id' => $menu->id,
           'system_name' => 'about-us',
-          'position' => 2,
+          'sort_order' => 2,
           'target' => '_self',
           'link_type' => 'internal',
           'en' => [
@@ -80,7 +80,7 @@ class InitialMenuSeeder extends Seeder
         [
           'menu_id' => $menu->id,
           'system_name' => 'contact',
-          'position' => 3,
+          'sort_order' => 3,
           'target' => '_self',
           'link_type' => 'internal',
           'en' => [

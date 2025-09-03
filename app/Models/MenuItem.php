@@ -34,7 +34,7 @@ class MenuItem extends CoreModel
     'page_id',
     'system_name',
     'parent_id',
-    'position',
+    'sort_order',
     'target',
     'module_name',
     'is_root',
