@@ -51,11 +51,13 @@ class MenuItem extends CoreModel
   /**
    * Check if page_id is empty and returning null instead empty string
    */
-  public function pageId(): Attribute
+  public function page(): BelongsTo
   {
-    return Attribute::make(
-      get: fn(?int $value) => !empty($value) ? $value : null
-    );
+    if (isModuleEnabled('Ipage')) {
+      $class = 'Modules\\Ipage\\Models\\Page';
+      return $this->belongsTo($class, 'page_id');
+    }
+    return new \Imagina\Icore\Relations\EmptyRelation();
   }
 
   /**
