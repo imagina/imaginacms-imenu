@@ -12,5 +12,6 @@ class CacheMenuItemDecorator extends CoreCacheDecorator implements MenuItemRepos
         parent::__construct();
         $this->entityName = 'imenu.menuitems';
         $this->repository = $menuitem;
+        $this->tags = ['imenu.menus'];
     }
 }
