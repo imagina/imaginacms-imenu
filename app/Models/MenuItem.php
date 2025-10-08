@@ -43,6 +43,12 @@ class MenuItem extends CoreModel
     'class',
   ];
 
+  /**
+   * Attributes to search
+   * The following attributes are added by default: id,title
+   */
+  public $searchable = ['description'];
+
   public function menu(): BelongsTo
   {
     return $this->belongsTo(Menu::class);
